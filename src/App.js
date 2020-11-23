@@ -12,7 +12,7 @@ const alankey = "535eb03057199a7c8aac8821891a29ec2e956eca572e1d8b807a3e2338fdd0d
 
 function App() {
 
-  const [activeArticle, setActiveArticle] = useState(0);
+  const [activeArticle, setActiveArticle] = useState(-1);
   const [newsArticles, setNewsArticles] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,6 +24,15 @@ function App() {
       key: alankey,
       onCommand: ({ command, articles, number }) => {
         if (command === 'newsHeadlines') {
+          setNewsArticles(articles)
+          console.log(newsArticles)
+        }
+        else if (command === 'newHeadlines') {
+          setNewsArticles(articles)
+          console.log(newsArticles)
+        }
+
+        else if (command === 'Headlines') {
           setNewsArticles(articles)
           console.log(newsArticles)
         }
