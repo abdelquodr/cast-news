@@ -2,11 +2,12 @@
 
 html, body, #root{
   height: 100vh;
+  font-family: 'Montserrat', serif;
 }
 
 *{
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', serif;
 }
 html{
   scroll-behavior: smooth;
@@ -15,6 +16,18 @@ html{
 body{
   margin: 0;
   background-color: whitesmoke;
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+}
+
+
+.h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
 }
 

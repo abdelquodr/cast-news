@@ -56,57 +56,23 @@ function App() {
     })
   }, [])
 
-  // useEffect(() => {
-  //   alanBtn({
-  //     key: alankey,
-  //     onCommand: ({ command, articles }) => {
-  //       if (command === 'newHeadlines') {
-  //         console.log('ARTICLES >>>>>', articles)
-  //         setNewsArticles(articles);
-  //         setActiveArticle(-1);
-  //         } else if (command === 'instructions') {
-  //           setIsOpen(true);
-  //         } else if (command === 'highlight') {
-  //           setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
-  //         } else if (command === 'open') {
-  //           const parsedNumber = number.length > 2 ? wordsToNumbers((number), { fuzzy: true }) : number;
-  //           const article = articles[parsedNumber - 1];
-
-  //           if (parsedNumber > articles.length) {
-  //             alanBtn().playText('Please try that again...');
-  //           } else if (article) {
-  //             window.open(article.url, '_blank');
-  //             alanBtn().playText('Opening...');
-  //           } else {
-  //             alanBtn().playText('Please try that again...');
-  //           }
-  //       }
-  //     },
-  //   });
-  // }, []);
 
 
   return (
     <div >
       <Header />
-      {/* <div className={classes.logoContainer}>
-        {newsArticles.length ? (
-          <div className={classes.infoContainer}>
-            <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Open article number [4]</Typography></div>
-            <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
-          </div>
-        ) : null}
 
-      </div> */}
-      <NewsCards articles={newsArticles} activeArticle={activeArticle} />
-
-      {/* {!newsArticles.length ? (
-        <div className={classes.footer}>
-          <Typography variant="body1" component="h2">
-
-          </Typography>
+      <div className="h2 center my-5 pt-3 text-dark" >{newsArticles.length < 1 ? 'How To Use' : ''}</div>
+      <div className="container">
+        <div className="row">
+          <NewsCards articles={newsArticles} activeArticle={activeArticle} />
         </div>
-      ) : null} */}
+      </div>
+
+
+      <div className="pt-3 mt-5 pb-4 text-center bg-primary text-light">
+        Copyright © 2020 All rights reserved | news cast | Qode_Moore
+</div>
     </div>
   );
 };

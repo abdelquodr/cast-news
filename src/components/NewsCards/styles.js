@@ -15,7 +15,7 @@ const styles = makeStyles({
         // fontSize: '1em'
     },
     infoCard: {
-        display: 'flex',
+        // display: 'flex',
         flexDirection: 'column',
         textAlign: 'center',
     },

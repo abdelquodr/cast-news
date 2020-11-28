@@ -5,15 +5,16 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
+import backgroundImg from '../img/1626.jpg'
 
 const useStyles = makeStyles((theme) => ({
     mainFeaturedPost: {
         position: 'relative',
-        height: '25rem',
+        height: '85vh',
         backgroundColor: theme.palette.grey[800],
         color: theme.palette.common.white,
         marginBottom: theme.spacing(4),
-        backgroundImage: 'url(https://source.unsplash.com/random)',
+        // backgroundImage: 'url()',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -39,19 +40,19 @@ const useStyles = makeStyles((theme) => ({
 
 
 const post = {
-    title: 'Featured post',
-    date: 'Nov 12',
-    description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random',
-    imageText: 'Image Text',
+    // title: 'NEWS CASTER',
+    // date: 'Nov 12',
+    // description: 'This is a news cast application capable of reporting verbally as it breaks.',
+    // image: 'https://source.unsplash.com/random',
+    // imageText: 'Image Text',
 }
 
 export default function Header(props) {
     const classes = useStyles();
 
     return (
-        <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(${post.image})` }}>
-            {/* Increase the priority of the hero background image */}
+        <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(${backgroundImg})` }}>
+
             {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
             <div className={classes.overlay} />
             <Grid container>
@@ -64,7 +65,7 @@ export default function Header(props) {
                             {post.description}
                         </Typography>
                         <Link variant="subtitle1" href="#">
-                            ihiueifuhe ujaui hahurhgu v ruhruhruhb vijhfuv
+
                         </Link>
                     </div>
                 </Grid>
